@@ -6,6 +6,7 @@ router = SimpleRouter()
 
 urlpatterns = [
     path('api/', include(router.urls), name='api'),
-    path('api/data/insert/', DataInsertView.as_view(), name="data"),
-    path('api/data/fetch/', DataFetchView.as_view(), name="data"),
+    path('api/data/insert/', DataInsertView.as_view(), name="insert_data"),
+    path('api/data/fetch/', DataFetchView.as_view(), name="fetch_all_data"),
+    path('api/data/fetch/chunk/', DataFetchChunkView.as_view(), name="fetch_chunk_data")
 ]
