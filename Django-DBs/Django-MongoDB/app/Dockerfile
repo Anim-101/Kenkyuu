@@ -1,4 +1,3 @@
-# FROM python:3.9.6-buster
 FROM python:3.6
 
 WORKDIR /usr/src/app
@@ -14,4 +13,4 @@ RUN pip install --upgrade pip
 COPY ./requirements.txt .
 RUN pip install -r requirements.txt
 
-copy . .
+COPY . .

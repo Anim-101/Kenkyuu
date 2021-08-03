@@ -80,7 +80,7 @@ DATABASES = {
         'CLIENT':{
             'host': 'mongodb',
             'port': 27017,
-            'user': 'root',
+            'username': 'root',
             'password': 'mongoadmin',
             'authSource': 'admin',
             'authMechanism': 'SCRAM-SHA-1',
