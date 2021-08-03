@@ -1,2 +1,2 @@
-Django==2.2.12
-djongo
+Django==3.2.6
+djongo==1.3.6

@@ -16,7 +16,7 @@ services:
       - mongodb
   mongodb:
     restart: always
-    image: mongo:3.6
+    image: mongo
     volumes:
       - init_db:/var/lib/mongodb/data/docker-entrypoint-initdb.d
       - data_db:/var/lib/mongodb/data/db
