@@ -1,1 +1,2 @@
-# Dockerized Django and MongoDB to test loads of data. Test cases are based on different different scenario behalf of research purposes.
+# Dockerized Django and MongoDB to test loads of data. Test cases are based on different scenario behalf of research purposes.
+## Findings: Inserting One Million Data took 41 minutes and 7 seconds. Fetching One Million Data took 1 minutes and 39 seconds.
