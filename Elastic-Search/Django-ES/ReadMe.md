@@ -1,0 +1,1 @@
+# Research on Django Based Elastic Search. Dockerized Django Project with PostgreSQL is used to work on Elastic Search. For that django-elasticsearch-dsl-drf package is used.
