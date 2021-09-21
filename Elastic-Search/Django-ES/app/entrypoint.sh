@@ -15,21 +15,3 @@ fi
 #python manage.py migrate
 
 exec "$@"
-
-
-var childTicket = [1, , 3, 4]
-
-watcher.something {
-    for child in childTicket {
-        fetch(API)
-        name
-    }
-}
-
-
-{
-    name: 'akash',
-    name: 'anim',
-    name: 'muhahaha',
-    name: 'ouhhoisosososso'
-}
