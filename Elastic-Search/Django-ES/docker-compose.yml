@@ -1,5 +1,4 @@
 version: '3.7'
-
 services:
   web:
     restart: always
@@ -13,6 +12,7 @@ services:
       - ./.env.dev
     depends_on:
       - db
+      - es
   db:
     restart: always
     image: postgres:12.3
@@ -24,5 +24,23 @@ services:
       - POSTGRES_USER=admin
       - POSTGRES_PASSWORD=password
       - POSTGRES_DB=djanes
+  kibana:
+    image: docker.elastic.co/kibana/kibana:7.8.1
+    environment:
+      - ELASTICSEARCH_HOSTS=http://elasticsearch:9200
+    ports:
+      - 5601:5601
+    depends_on:
+      - es
+  es:
+    image: elasticsearch:7.8.1
+    container_name: elasticsearch
+    environment:
+      - discovery.type=single-node
+    volumes:
+      - elasticsearch_data:/var/lib/elasticsearch/data/
+    ports:
+      - 9200:9200
 volumes:
   postgres_data:
+  elasticsearch_data:
