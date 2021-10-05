@@ -59,6 +59,10 @@ ELASTICSEARCH_DSL = {
     },
 }
 
+ELASTICSEARCH_INDEX_NAME = {
+    'kenkyuu.elasticsearch': 'book'
+}
+
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
