@@ -4,7 +4,7 @@ from django_elasticsearch_dsl_drf.serializers import DocumentSerializer
 from .elasticsearch import BookDocument
 
 
-class BookDocumentSerializer(DocumentSerializer):
+class BookDocumentSerializer(serializers.Serializer):
     """Serializer for the book document."""
 
     id = serializers.IntegerField(read_only=True)
@@ -42,3 +42,10 @@ class BookDocumentSerializer(DocumentSerializer):
             'stock_count',
             'tags',
         }
+
+        def get_tags(self, object):
+            """Get tags"""
+            if object.tags:
+                return  list(object.tags)
+            else:
+                return []

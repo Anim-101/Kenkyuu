@@ -1,10 +1,11 @@
-from django.conf.urls import include, url
-from rest_framework.routers import DefaultRouter
-from .views import BookDocumentView
+from django.urls import include, path
+from rest_framework.routers import SimpleRouter
+from .views import *
 
-router = DefaultRouter()
+router = SimpleRouter()
 books = router.register(r'books', BookDocumentView, basename='bookdocument')
 
 urlpatterns = [
-    url(r'^', include(router.urls))
+    path('api', include(router.urls), name='api'),
+    path('api/kenkyu/books/', BookDocumentView, name='bookdocument'),
 ]

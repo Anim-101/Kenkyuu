@@ -18,6 +18,7 @@ BOOK_PUBLISHING_STATUS_CHOICES = (
 )
 BOOK_PUBLISHING_STATUS_DEFAULT = BOOK_PUBLISHING_STATUS_PUBLISHED
 
+
 class Publisher(models.Model):
     """Publisher Model"""
 
@@ -71,6 +72,7 @@ class Author(models.Model):
     def __str__(self):
         return self.name
 
+
 class Tag(models.Model):
     """Tag Model"""
 
@@ -84,6 +86,7 @@ class Tag(models.Model):
 
     def __str__(self):
         return self.title
+
 
 class Book(models.Model):
     """Book Model"""
