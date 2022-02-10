@@ -1,6 +1,0 @@
-Django==3.2.7
-django-cors-headers==3.4.0
-djangorestframework==3.12
-django-grpc
-graphene-django
-psycopg2-binary==2.8.5
