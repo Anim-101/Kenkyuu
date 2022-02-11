@@ -60,7 +60,6 @@ ELASTICSEARCH_DSL = {
 }
 
 ELASTICSEARCH_INDEX_NAME = {
-    'kenkyuu.elasticsearch': 'book'
 }
 
 MIDDLEWARE = [
