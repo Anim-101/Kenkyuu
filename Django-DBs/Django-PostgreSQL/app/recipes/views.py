@@ -33,7 +33,8 @@ class RecipeViewSet(APIView):
                     ]
                 }
                 return Response(data, status=status.HTTP_201_CREATED)
-        except:
+        except Exception as e:
+            print(e)
             data = {
                 "message": "Recipe creation failed!",
                 "required": "title, making_time, serves, ingredients, cost",
